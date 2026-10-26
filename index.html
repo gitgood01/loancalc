@@ -8,7 +8,7 @@ let PV = document.getElementById("pv").value;
 let n = document.getElementById("yr").value;
 let r = document.getElementById("ir").value;
 let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
-document.getElementById("ans").innerHTML = "When borrowing" + PV + " for " + n + " years at a " + r + "% interest rate, your monthly payment will be $" + P.toFixed(2);
+document.getElementById("ans").innerHTML = "When borrowing $" + PV + " for " + n + " years at a " + r + "% interest rate, your monthly payment will be $" + P.toFixed(2);
 }
 
 
@@ -23,7 +23,7 @@ document.getElementById("ans").innerHTML = "When borrowing" + PV + " for " + n +
 <input id="ir">% - Annual interest rate <br>
 
 <button onclick="loan()"> Calculate your monthly payment </button>
-<p>Calculation: <span id="ans">_________</span></p>
+<p> Calculation: <span id="ans">_________</span></p>
   
 </p>
 <p><span id="ans">_________</span></p>
