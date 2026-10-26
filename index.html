@@ -1,2 +1,32 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loan Payment Calculator</title>
+<script>
+function loan() {
+let PV = document.getElementById("pv").value;
+let n = document.getElementById("yr").value;
+let r = document.getElementById("ir").value;
 let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
+document.getElementById("ans").innerHTML = P;
+}
+
+
+</script>
+  
+</head>
+<body>
+
+<h3>Input your numbers</h3>
+<p> <input id="pv"> Amount you want to borrow? <br>
+<input id="yr"> Years? <br>
+<input id="ir">% - Annual interest rate <br>
+
+<button onclick="loan()"> Calculate your monthly payment </button>
+
+</p>
+<p>Your annual payment is <span id="ans">_________</span></p>
+  
+</body>
+</html>
+
